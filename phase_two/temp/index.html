@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Card UI</title>
+    <style>
+        /* Base Reset and Font */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Card Container */
+        .card {
+            background-color: #ffffff;
+            width: 340px;
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Header Section (Logo + Save Btn) */
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .logo-box {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid #e5e5e5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .logo-box img {
+            width: 70%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .save-btn {
+            background: transparent;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            padding: 6px 12px;
+            font-size: 13px;
+            color: #666;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: 0.2s;
+        }
+
+        .save-btn:hover {
+            background-color: #f9f9f9;
+        }
+
+        /* Content Section */
+        .company-meta {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .company-name {
+            font-weight: 600;
+            color: #111;
+            margin-right: 6px;
+        }
+
+        .posted-time {
+            color: #888;
+            font-weight: 400;
+        }
+
+        .job-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        /* Tags */
+        .tags-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .tag {
+            background-color: #f2f2f2; /* Light grey background */
+            color: #333;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        /* Divider Line */
+        .divider {
+            height: 1px;
+            background-color: #f0f0f0;
+            margin-top: 10px;
+        }
+
+        /* Footer Section */
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .salary {
+            font-size: 20px;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 4px;
+        }
+
+        .location {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .apply-btn {
+            background-color: #111;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .apply-btn:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="card-header">
+            <div class="logo-box">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" alt="Amazon Logo">
+            </div>
+            <button class="save-btn">
+                Save
+                <svg width="10" height="12" viewBox="0 0 10 14" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M1 1h8v12L5 9l-4 4V1z" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+
+        <div class="card-body">
+            <div class="company-meta">
+                <span class="company-name">Amazon</span>
+                <span class="posted-time">5 days ago</span>
+            </div>
+            <h2 class="job-title">Senior UI/UX Designer</h2>
+            
+            <div class="tags-container">
+                <span class="tag">Part-Time</span>
+                <span class="tag">Senior Level</span>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card-footer">
+            <div class="details">
+                <div class="salary">$120/hr</div>
+                <div class="location">Mumbai, India</div>
+            </div>
+            <button class="apply-btn">Apply now</button>
+        </div>
+    </div>
+
+</body>
+</html>

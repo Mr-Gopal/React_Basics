@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+.parent {
+  display: flex;
+}
+
+.card {
+  width: 300px;
+  height: 300px;
+  border: 1px solid white;
+  padding: 20px;
+  text-align: center;
+  background-color: #333;
+  border-radius: 10px;
+}
+
+.card img {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+}
+
+.card p {
+  margin: 20px 0px;
+}
+
+.card .button {
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+}
+
+.nav {
+  background-color: rgb(0, 25, 107);
+  height: 40px;
+  padding: 5px;
+  text-align: center; 
+}
