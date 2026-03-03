@@ -2,7 +2,7 @@ import './App.css'
 import Section1 from "./components/Section1/Section1.jsx"
 
 function App() {
-  const imgs = [
+  const crafts = [
     {
       img: "https://i.pinimg.com/736x/aa/7d/4f/aa7d4f51e1842411b5c1c8c18de66db5.jpg", 
       intro: "Massive treehouse village in jungle canopy", 
@@ -31,13 +31,13 @@ function App() {
     {
       img: "https://i.pinimg.com/1200x/34/b4/ae/34b4ae92e341c24bde576540a2b08536.jpg", 
       intro: "Antique forbidden rock and wooden hill house", 
-      tag: "Common"
+      tag: "Antique"
     }, 
 
   ]
   return (
     <div>
-      <Section1 />
+      <Section1 crafts={crafts}/>
     </div>
   )
 }
