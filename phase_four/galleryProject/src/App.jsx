@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import axios from 'axios'
+import Card from './Card.jsx'
 
 function App() {
   const [userData, setUserData] = useState([])
@@ -12,22 +13,17 @@ function App() {
     console.log(userData)
   }
 
-  useEffect(function() {
+  useEffect(function () {
     getData()
   }, [index])
 
-  let displayUserData = <h3 className='text-gray-500 text-s'>User doesn't exists</h3>
+  let displayUserData = <h3 className='text-gray-300 text-2xl font-bold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>Loading...</h3>
 
-  if (userData.length>0) {
-    displayUserData = userData.map(function(elem, idx) {
+  if (userData.length > 0) {
+    displayUserData = userData.map(function (elem, idx) {
       return (
         <div key={idx}>
-          <a href={elem.url}>
-            <div className='h-42 w-46 overflow-hidden bg-white rounded-xl'>
-              <img className='h-full w-full object-cover' src={elem.download_url} alt="" />
-            </div>
-            <h2 className='font-bold text-lg'>{elem.author}</h2>
-          </a>
+          <Card elem={elem}/>
         </div>
       )
     })
@@ -45,14 +41,23 @@ function App() {
 
       <div className='flex justify-center items-center p-4 gap-5'>
         <button
-          onClick={()=>setIndex(index-1)}
+          onClick={() => {
+            if (index > 1) {
+              setIndex(index - 1)
+              setUserData([])
+            }
+          }}
           className='bg-green-500 text-white rounded cursor-pointer active:scale-95 px-4 py-2 font-semibold'>
-          Prev  
+          Prev
         </button>
-        <button 
-          onClick={()=>setIndex(index+1)}
+        <h3>Page {index}</h3>
+        <button
+          onClick={() => {
+            setIndex(index + 1)
+            setUserData([])
+          }}
           className='bg-green-500 text-white rounded cursor-pointer active:scale-95 px-4 py-2 font-semibold'>
-          Next  
+          Next
         </button>
       </div>
     </div>
