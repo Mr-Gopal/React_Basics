@@ -1,4 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html, body {
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+
+body {
   background-color: rgb(34,34,34);
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  white-space: nowrap;
+  text-decoration: underline;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: rgb(81, 81, 81);
+  border-radius: 40px;
+  margin: 15px 15px 15px;
+}
+
+.nav div {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  font-size: 20px;
+}
+
+.nav div a:-webkit-any-link {
+  text-decoration: none;
   color: white;
 }
